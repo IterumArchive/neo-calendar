@@ -1,0 +1,49 @@
+{
+  "name": "@iterumarchive/neo-calendar",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "rm -rf dist *.tsbuildinfo"
+  },
+  "sideEffects": [
+    "dist/index.js"
+  ],
+  "description": "Standard NeoCalendar package with full API - includes Gregorian, Holocene, Julian, and Unix calendars",
+  "keywords": [
+    "calendar",
+    "gregorian",
+    "julian",
+    "holocene",
+    "unix",
+    "date",
+    "conversion"
+  ],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iterumarchive/calendar",
+    "directory": "packages/neo-calendar"
+  },
+  "dependencies": {
+    "@iterumarchive/neo-calendar-core": "*",
+    "@iterumarchive/neo-calendar-gregorian": "*",
+    "@iterumarchive/neo-calendar-holocene": "*",
+    "@iterumarchive/neo-calendar-julian": "*",
+    "@iterumarchive/neo-calendar-unix": "*"
+  }
+}

@@ -1,0 +1,422 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "Gregorian Calendar Adoption Dates",
+  "description": "Country-specific dates when the Gregorian calendar was adopted, replacing the Julian calendar. The transition typically involved skipping 10-13 days to realign with solar year.",
+  "adoptions": [
+    {
+      "countries": ["VA", "IT", "ES", "PT", "PL"],
+      "regions": ["Papal States", "Spain", "Portugal", "Poland-Lithuania"],
+      "adoptionDate": {
+        "year": 1582,
+        "month": 10,
+        "day": 15
+      },
+      "julianLastDate": {
+        "year": 1582,
+        "month": 10,
+        "day": 4
+      },
+      "skipRange": {
+        "startJDN": 2299151,
+        "endJDN": 2299160
+      },
+      "daysSkipped": 10,
+      "source": "Papal Bull 'Inter gravissimas' by Pope Gregory XIII",
+      "notes": "Original adoption as mandated by Pope Gregory XIII. October 4, 1582 (Julian) was followed by October 15, 1582 (Gregorian)."
+    },
+    {
+      "countries": ["FR"],
+      "regions": ["France"],
+      "adoptionDate": {
+        "year": 1582,
+        "month": 12,
+        "day": 20
+      },
+      "julianLastDate": {
+        "year": 1582,
+        "month": 12,
+        "day": 9
+      },
+      "skipRange": {
+        "startJDN": 2299217,
+        "endJDN": 2299226
+      },
+      "daysSkipped": 10,
+      "source": "Royal decree of King Henry III",
+      "notes": "France adopted two months after the papal decree. December 9, 1582 (Julian) was followed by December 20, 1582 (Gregorian)."
+    },
+    {
+      "countries": ["BE", "NL"],
+      "regions": ["Southern Netherlands", "Flanders"],
+      "adoptionDate": {
+        "year": 1582,
+        "month": 12,
+        "day": 25
+      },
+      "julianLastDate": {
+        "year": 1582,
+        "month": 12,
+        "day": 14
+      },
+      "skipRange": {
+        "startJDN": 2299222,
+        "endJDN": 2299231
+      },
+      "daysSkipped": 10,
+      "source": "Habsburg Netherlands decree",
+      "notes": "Catholic Low Countries (Spanish Netherlands). December 14, 1582 (Julian) was followed by December 25, 1582 (Gregorian)."
+    },
+    {
+      "countries": ["AT", "CZ", "DE"],
+      "regions": ["Austria", "Bohemia", "Catholic German states"],
+      "adoptionDate": {
+        "year": 1584,
+        "month": 1,
+        "day": 17
+      },
+      "julianLastDate": {
+        "year": 1584,
+        "month": 1,
+        "day": 6
+      },
+      "skipRange": {
+        "startJDN": 2299598,
+        "endJDN": 2299607
+      },
+      "daysSkipped": 10,
+      "source": "Imperial decree",
+      "notes": "Catholic regions of the Holy Roman Empire. January 6, 1584 (Julian) was followed by January 17, 1584 (Gregorian)."
+    },
+    {
+      "countries": ["HU"],
+      "regions": ["Hungary"],
+      "adoptionDate": {
+        "year": 1587,
+        "month": 11,
+        "day": 1
+      },
+      "julianLastDate": {
+        "year": 1587,
+        "month": 10,
+        "day": 21
+      },
+      "skipRange": {
+        "startJDN": 2301014,
+        "endJDN": 2301023
+      },
+      "daysSkipped": 10,
+      "source": "Hungarian Catholic Church",
+      "notes": "October 21, 1587 (Julian) was followed by November 1, 1587 (Gregorian)."
+    },
+    {
+      "countries": ["DE"],
+      "regions": ["Prussia", "Protestant German states"],
+      "adoptionDate": {
+        "year": 1700,
+        "month": 3,
+        "day": 1
+      },
+      "julianLastDate": {
+        "year": 1700,
+        "month": 2,
+        "day": 18
+      },
+      "skipRange": {
+        "startJDN": 2342032,
+        "endJDN": 2342041
+      },
+      "daysSkipped": 10,
+      "source": "Protestant German states decree",
+      "notes": "Protestant regions finally adopted after 118 years. February 18, 1700 (Julian) was followed by March 1, 1700 (Gregorian)."
+    },
+    {
+      "countries": ["NL"],
+      "regions": ["Netherlands (Protestant provinces)", "Dutch Republic"],
+      "adoptionDate": {
+        "year": 1700,
+        "month": 12,
+        "day": 1
+      },
+      "julianLastDate": {
+        "year": 1700,
+        "month": 11,
+        "day": 20
+      },
+      "skipRange": {
+        "startJDN": 2342307,
+        "endJDN": 2342316
+      },
+      "daysSkipped": 10,
+      "source": "States-General decree",
+      "notes": "Protestant Dutch provinces. November 20, 1700 (Julian) was followed by December 1, 1700 (Gregorian)."
+    },
+    {
+      "countries": ["DK", "NO"],
+      "regions": ["Denmark-Norway"],
+      "adoptionDate": {
+        "year": 1700,
+        "month": 3,
+        "day": 1
+      },
+      "julianLastDate": {
+        "year": 1700,
+        "month": 2,
+        "day": 18
+      },
+      "skipRange": {
+        "startJDN": 2342032,
+        "endJDN": 2342041
+      },
+      "daysSkipped": 10,
+      "source": "Royal decree of Denmark-Norway",
+      "notes": "Denmark and Norway adopted together as a unified kingdom."
+    },
+    {
+      "countries": ["GB", "IE", "US", "CA"],
+      "regions": ["Great Britain", "British Empire", "American Colonies"],
+      "adoptionDate": {
+        "year": 1752,
+        "month": 9,
+        "day": 14
+      },
+      "julianLastDate": {
+        "year": 1752,
+        "month": 9,
+        "day": 2
+      },
+      "skipRange": {
+        "startJDN": 2361209,
+        "endJDN": 2361219
+      },
+      "daysSkipped": 11,
+      "source": "Calendar (New Style) Act 1750",
+      "notes": "British Empire adoption. September 2, 1752 (Julian) was followed by September 14, 1752 (Gregorian). By this time, 11 days needed to be skipped due to accumulated drift."
+    },
+    {
+      "countries": ["SE", "FI"],
+      "regions": ["Sweden", "Finland"],
+      "adoptionDate": {
+        "year": 1753,
+        "month": 3,
+        "day": 1
+      },
+      "julianLastDate": {
+        "year": 1753,
+        "month": 2,
+        "day": 17
+      },
+      "skipRange": {
+        "startJDN": 2361386,
+        "endJDN": 2361396
+      },
+      "daysSkipped": 11,
+      "source": "Swedish Calendar Act",
+      "notes": "Sweden had attempted a gradual transition starting in 1700 but reverted. Final adoption in 1753. February 17, 1753 (Julian) was followed by March 1, 1753 (Gregorian)."
+    },
+    {
+      "countries": ["JP"],
+      "regions": ["Japan"],
+      "adoptionDate": {
+        "year": 1873,
+        "month": 1,
+        "day": 1
+      },
+      "julianLastDate": {
+        "year": 1872,
+        "month": 12,
+        "day": 19
+      },
+      "skipRange": {
+        "startJDN": 2405175,
+        "endJDN": 2405186
+      },
+      "daysSkipped": 12,
+      "source": "Meiji government decree",
+      "notes": "Japan adopted the Gregorian calendar during the Meiji Restoration. The last day of the old lunisolar calendar (December 2, Meiji 5) was followed by January 1, 1873 (Gregorian)."
+    },
+    {
+      "countries": ["EG"],
+      "regions": ["Egypt"],
+      "adoptionDate": {
+        "year": 1875,
+        "month": 1,
+        "day": 1
+      },
+      "julianLastDate": {
+        "year": 1874,
+        "month": 12,
+        "day": 19
+      },
+      "skipRange": {
+        "startJDN": 2405906,
+        "endJDN": 2405917
+      },
+      "daysSkipped": 12,
+      "source": "Khedivate decree",
+      "notes": "Egypt under Ottoman rule adopted for administrative purposes."
+    },
+    {
+      "countries": ["KR"],
+      "regions": ["Korea"],
+      "adoptionDate": {
+        "year": 1896,
+        "month": 1,
+        "day": 1
+      },
+      "julianLastDate": {
+        "year": 1895,
+        "month": 12,
+        "day": 19
+      },
+      "skipRange": {
+        "startJDN": 2413559,
+        "endJDN": 2413571
+      },
+      "daysSkipped": 13,
+      "source": "Korean Empire decree",
+      "notes": "Korea (Joseon Dynasty) adopted the Gregorian calendar. 13 days were skipped due to accumulated drift from 1582."
+    },
+    {
+      "countries": ["CN"],
+      "regions": ["China (Republic)"],
+      "adoptionDate": {
+        "year": 1912,
+        "month": 1,
+        "day": 1
+      },
+      "julianLastDate": {
+        "year": 1911,
+        "month": 12,
+        "day": 18
+      },
+      "skipRange": {
+        "startJDN": 2419402,
+        "endJDN": 2419414
+      },
+      "daysSkipped": 13,
+      "source": "Republic of China decree",
+      "notes": "Adopted after the Xinhai Revolution and establishment of the Republic. Traditional Chinese calendar continued for cultural purposes."
+    },
+    {
+      "countries": ["BG"],
+      "regions": ["Bulgaria"],
+      "adoptionDate": {
+        "year": 1916,
+        "month": 4,
+        "day": 14
+      },
+      "julianLastDate": {
+        "year": 1916,
+        "month": 3,
+        "day": 31
+      },
+      "skipRange": {
+        "startJDN": 2420981,
+        "endJDN": 2420993
+      },
+      "daysSkipped": 13,
+      "source": "Bulgarian government decree",
+      "notes": "March 31, 1916 (Julian) was followed by April 14, 1916 (Gregorian)."
+    },
+    {
+      "countries": ["RU", "BY", "UA", "EE", "LV", "LT"],
+      "regions": ["Soviet Russia", "Soviet Union"],
+      "adoptionDate": {
+        "year": 1918,
+        "month": 2,
+        "day": 14
+      },
+      "julianLastDate": {
+        "year": 1918,
+        "month": 1,
+        "day": 31
+      },
+      "skipRange": {
+        "startJDN": 2421639,
+        "endJDN": 2421651
+      },
+      "daysSkipped": 13,
+      "source": "Soviet decree 'On the introduction of the Western European calendar'",
+      "notes": "Soviet Russia adopted after the October Revolution. January 31, 1918 (Julian) was followed by February 14, 1918 (Gregorian). This is why the 'October Revolution' occurred in November by Gregorian calendar."
+    },
+    {
+      "countries": ["RO"],
+      "regions": ["Romania"],
+      "adoptionDate": {
+        "year": 1919,
+        "month": 4,
+        "day": 14
+      },
+      "julianLastDate": {
+        "year": 1919,
+        "month": 3,
+        "day": 31
+      },
+      "skipRange": {
+        "startJDN": 2422078,
+        "endJDN": 2422090
+      },
+      "daysSkipped": 13,
+      "source": "Romanian government decree",
+      "notes": "March 31, 1919 (Julian) was followed by April 14, 1919 (Gregorian)."
+    },
+    {
+      "countries": ["GR"],
+      "regions": ["Greece"],
+      "adoptionDate": {
+        "year": 1924,
+        "month": 3,
+        "day": 23
+      },
+      "julianLastDate": {
+        "year": 1924,
+        "month": 3,
+        "day": 9
+      },
+      "skipRange": {
+        "startJDN": 2423871,
+        "endJDN": 2423883
+      },
+      "daysSkipped": 13,
+      "source": "Greek government decree",
+      "notes": "Civil adoption. Greek Orthodox Church still uses Julian calendar for religious purposes. March 9, 1924 (Julian) was followed by March 23, 1924 (Gregorian)."
+    },
+    {
+      "countries": ["TR"],
+      "regions": ["Turkey"],
+      "adoptionDate": {
+        "year": 1926,
+        "month": 1,
+        "day": 1
+      },
+      "julianLastDate": {
+        "year": 1925,
+        "month": 12,
+        "day": 18
+      },
+      "skipRange": {
+        "startJDN": 2424517,
+        "endJDN": 2424529
+      },
+      "daysSkipped": 13,
+      "source": "Turkish government decree under Atatürk",
+      "notes": "Part of Atatürk's westernization reforms. December 18, 1925 (Julian/Rumi) was followed by January 1, 1926 (Gregorian)."
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2026-03-19",
+    "sources": [
+      "Dershowitz & Reingold, Calendrical Calculations",
+      "Blackburn & Holford-Strevens, The Oxford Companion to the Year",
+      "Various national historical records"
+    ],
+    "notes": [
+      "JDN (Julian Day Number) values represent the continuous count of days since January 1, 4713 BCE (Julian calendar)",
+      "skipRange.startJDN is the first impossible date, skipRange.endJDN is the last impossible date (inclusive)",
+      "Some countries had multiple attempts at adoption or regional variations",
+      "Religious institutions often maintained Julian calendar longer than civil authorities",
+      "The number of days skipped increased over time (10 in 1582, 11 in 1752, 13 in 1918) due to accumulated drift"
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "@iterumarchive/neo-calendar-lite",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "rm -rf dist *.tsbuildinfo"
+  },
+  "sideEffects": false,
+  "description": "Lightweight calendar conversion helpers for database queries and backend microservices - ~8kb bundle",
+  "keywords": [
+    "calendar",
+    "jdn",
+    "julian-day-number",
+    "database",
+    "sql",
+    "conversion",
+    "gregorian",
+    "holocene",
+    "julian",
+    "lightweight"
+  ],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iterumarchive/calendar",
+    "directory": "packages/neo-calendar-lite"
+  },
+  "dependencies": {
+    "@iterumarchive/neo-calendar-core": "*",
+    "@iterumarchive/neo-calendar-gregorian": "*",
+    "@iterumarchive/neo-calendar-holocene": "*",
+    "@iterumarchive/neo-calendar-julian": "*",
+    "@iterumarchive/neo-calendar-unix": "*"
+  }
+}

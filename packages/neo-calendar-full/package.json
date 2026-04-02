@@ -1,0 +1,66 @@
+{
+  "name": "@iterumarchive/neo-calendar-full",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "rm -rf dist *.tsbuildinfo"
+  },
+  "sideEffects": [
+    "dist/index.js"
+  ],
+  "description": "Complete NeoCalendar package with all 12 calendar systems - zero configuration required",
+  "keywords": [
+    "calendar",
+    "gregorian",
+    "julian",
+    "hebrew",
+    "islamic",
+    "persian",
+    "coptic",
+    "ethiopian",
+    "mayan",
+    "french-revolutionary",
+    "holocene",
+    "unix",
+    "before-present",
+    "date",
+    "conversion"
+  ],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iterumarchive/calendar",
+    "directory": "packages/neo-calendar-full"
+  },
+  "dependencies": {
+    "@iterumarchive/neo-calendar": "*",
+    "@iterumarchive/neo-calendar-before-present": "*",
+    "@iterumarchive/neo-calendar-coptic": "*",
+    "@iterumarchive/neo-calendar-core": "*",
+    "@iterumarchive/neo-calendar-ethiopian": "*",
+    "@iterumarchive/neo-calendar-french-revolutionary": "*",
+    "@iterumarchive/neo-calendar-gregorian": "*",
+    "@iterumarchive/neo-calendar-hebrew": "*",
+    "@iterumarchive/neo-calendar-holocene": "*",
+    "@iterumarchive/neo-calendar-islamic": "*",
+    "@iterumarchive/neo-calendar-julian": "*",
+    "@iterumarchive/neo-calendar-mayan": "*",
+    "@iterumarchive/neo-calendar-persian": "*",
+    "@iterumarchive/neo-calendar-unix": "*"
+  }
+}

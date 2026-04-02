@@ -1,0 +1,362 @@
+================================================================================
+REMAINING CALENDARS: ZERO DRIFT VERIFICATION
+================================================================================
+
+📋 TESTING SCOPE:
+  • Ethiopian: Solar calendar (13 months, similar to Coptic)
+  • Holocene: Simple offset from Gregorian (+10,000 years)
+  • Unix: Timestamp conversion (seconds since 1970-01-01)
+  • Before Present: Archaeological standard (1950 CE anchor)
+  • Persian: Solar calendar with 33-year leap cycle
+  • Mayan: Long Count deep-time calendar
+  • French Revolutionary: Decimal calendar (limited 1792-1805)
+
+⚠️  KNOWN LIMITATIONS:
+  • Persian: May exhibit 1-day drift due to simplified leap cycle
+  • Mayan: Correlation constant validation only (no triangle tests)
+  • French Revolutionary: Only valid 1792-1805
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TEST 1: Ethiopian ↔ Gregorian ↔ Coptic Triangle
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Ethiopian calendar: 13 months (12×30 days + 5-6 day Pagume)
+Structure mirrors Coptic calendar with different epoch
+
+
+Pagume 6, 2015 (Last day of leap year)
+  Original:     Ethiopian 2015-13-6
+  Step 1:       Ethiopian → JDN 2460199
+  Step 2:       JDN → Gregorian 2023-9-11 AD
+  Step 3:       Gregorian → JDN 2460199
+  Step 4:       JDN → Coptic 1739-13-6
+  Step 5:       Coptic → JDN 2460199
+  Step 6:       JDN → Ethiopian 2015-13-6
+  JDN Drift:    0 days
+  Date Match:   ✓ PASS
+  Result:       ✓ 0.00% DRIFT
+
+Pagume 5, 2000 (13th month)
+  Original:     Ethiopian 2000-13-5
+  Step 1:       Ethiopian → JDN 2454719
+  Step 2:       JDN → Gregorian 2008-9-9 AD
+  Step 3:       Gregorian → JDN 2454719
+  Step 4:       JDN → Coptic 1724-13-4
+  Step 5:       Coptic → JDN 2454719
+  Step 6:       JDN → Ethiopian 2000-13-5
+  JDN Drift:    0 days
+  Date Match:   ✓ PASS
+  Result:       ✓ 0.00% DRIFT
+
+Middle of Ethiopian year 2015
+  Original:     Ethiopian 2015-7-15
+  Step 1:       Ethiopian → JDN 2460028
+  Step 2:       JDN → Gregorian 2023-3-24 AD
+  Step 3:       Gregorian → JDN 2460028
+  Step 4:       JDN → Coptic 1739-7-15
+  Step 5:       Coptic → JDN 2460028
+  Step 6:       JDN → Ethiopian 2015-7-15
+  JDN Drift:    0 days
+  Date Match:   ✓ PASS
+  Result:       ✓ 0.00% DRIFT
+
+Ethiopian Epoch (tests Coptic proleptic extension)
+  Original:     Ethiopian 1-1-1
+  Step 1:       Ethiopian → JDN 1724221
+  Step 2:       JDN → Gregorian 8-8-27 AD
+  Step 3:       Gregorian → JDN 1724221
+  Step 4:       JDN → Coptic -275-1-1
+  Step 5:       Coptic → JDN 1724221
+  Step 6:       JDN → Ethiopian 1-1-1
+  JDN Drift:    0 days
+  Date Match:   ✓ PASS
+  Result:       ✓ 0.00% DRIFT
+
+Test 1 Summary: 4 passed, 0 failed
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TEST 2: Holocene ↔ Gregorian (Simple +10,000 Year Offset)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Holocene calendar: Gregorian + 10,000 years (HE = Human Era)
+Should have perfect 0.00% drift (trivial transformation)
+
+
+Today (March 24, 12024 HE = 2024 CE)
+  Original:     Holocene 12024-3-24
+  Step 1:       Holocene → JDN 2460394
+  Step 2:       JDN → Gregorian 2024-3-24 AD
+  Step 3:       Gregorian → JDN 2460394
+  Step 4:       JDN → Holocene 12024-3-24
+  JDN Drift:    0 days
+  Date Match:   ✓ PASS
+  Result:       ✓ 0.00% DRIFT
+
+Y2K in Holocene (2000 CE)
+  Original:     Holocene 12000-1-1
+  Step 1:       Holocene → JDN 2451545
+  Step 2:       JDN → Gregorian 2000-1-1 AD
+  Step 3:       Gregorian → JDN 2451545
+  Step 4:       JDN → Holocene 12000-1-1
+  JDN Drift:    0 days
+  Date Match:   ✓ PASS
+  Result:       ✓ 0.00% DRIFT
+
+Unix Epoch in Holocene (1970 CE)
+  Original:     Holocene 11970-1-1
+  Step 1:       Holocene → JDN 2440588
+  Step 2:       JDN → Gregorian 1970-1-1 AD
+  Step 3:       Gregorian → JDN 2440588
+  Step 4:       JDN → Holocene 11970-1-1
+  JDN Drift:    0 days
+  Date Match:   ✓ PASS
+  Result:       ✓ 0.00% DRIFT
+
+1 CE in Holocene
+  Original:     Holocene 10001-1-1
+  Step 1:       Holocene → JDN 1721426
+  Step 2:       JDN → Gregorian 1-1-1 AD
+  Step 3:       Gregorian → JDN 1721426
+  Step 4:       JDN → Holocene 10001-1-1
+  JDN Drift:    0 days
+  Date Match:   ✓ PASS
+  Result:       ✓ 0.00% DRIFT
+
+1 BCE in Holocene
+  Original:     Holocene 10000-12-31
+  Step 1:       Holocene → JDN 1721425
+  Step 2:       JDN → Gregorian 1-12-31 BC
+  Step 3:       Gregorian → JDN 1721425
+  Step 4:       JDN → Holocene 10000-12-31
+  JDN Drift:    0 days
+  Date Match:   ✓ PASS
+  Result:       ✓ 0.00% DRIFT
+
+Test 2 Summary: 5 passed, 0 failed
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TEST 3: Unix Timestamp ↔ Gregorian (Second-to-Day Precision)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Unix: Timestamp in seconds since Jan 1, 1970 00:00:00 UTC
+Note: Unix uses 'year' field to store timestamp (semantic overloading)
+      JDN is day-level precision, Unix is second-level
+
+
+Unix Epoch (Jan 1, 1970, timestamp=0)
+  Original:     Unix timestamp 0 (stored in 'year' field)
+  Step 1:       Unix → JDN 2440588
+  Step 2:       JDN → Gregorian 1970-1-1 AD
+  Step 3:       Gregorian → JDN 2440588
+  Step 4:       JDN → Unix timestamp 0
+  JDN Drift:    0 days
+  Timestamp Match (day-level): ✓ PASS
+  Result:       ✓ 0.00% DRIFT
+
+Y2K (Jan 1, 2000, timestamp=946684800)
+  Original:     Unix timestamp 946684800 (stored in 'year' field)
+  Step 1:       Unix → JDN 2451545
+  Step 2:       JDN → Gregorian 2000-1-1 AD
+  Step 3:       Gregorian → JDN 2451545
+  Step 4:       JDN → Unix timestamp 946684800
+  JDN Drift:    0 days
+  Timestamp Match (day-level): ✓ PASS
+  Result:       ✓ 0.00% DRIFT
+
+March 24, 2024 (timestamp=1711238400)
+  Original:     Unix timestamp 1711238400 (stored in 'year' field)
+  Step 1:       Unix → JDN 2460394
+  Step 2:       JDN → Gregorian 2024-3-24 AD
+  Step 3:       Gregorian → JDN 2460394
+  Step 4:       JDN → Unix timestamp 1711238400
+  JDN Drift:    0 days
+  Timestamp Match (day-level): ✓ PASS
+  Result:       ✓ 0.00% DRIFT
+
+Test 3 Summary: 3 passed, 0 failed
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TEST 4: Before Present (BP) ↔ Gregorian (1950 CE Anchor)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BP: Radiocarbon dating standard, 0 BP = Jan 1, 1950 CE
+Negative BP values represent future dates
+
+
+BP Epoch (1950 CE)
+  Original:     BP 0-1-1
+  Step 1:       BP → JDN 2433283
+  Step 2:       JDN → Gregorian 1950-1-1 AD
+  Step 3:       Gregorian → JDN 2433283
+  Step 4:       JDN → BP 0-1-1
+  JDN Drift:    0 days
+  Date Match:   ✓ PASS
+  Result:       ✓ 0.00% DRIFT
+
+20 years before present (1970 CE)
+  Original:     BP -20-1-1
+  Step 1:       BP → JDN 2440588
+  Step 2:       JDN → Gregorian 1970-1-1 AD
+  Step 3:       Gregorian → JDN 2440588
+  Step 4:       JDN → BP -20-1-1
+  JDN Drift:    0 days
+  Date Match:   ✓ PASS
+  Result:       ✓ 0.00% DRIFT
+
+End of 1999 CE (-50 BP)
+  Original:     BP -50-12-31
+  Step 1:       BP → JDN 2451910
+  Step 2:       JDN → Gregorian 2000-12-31 AD
+  Step 3:       Gregorian → JDN 2451910
+  Step 4:       JDN → BP -50-12-31
+  JDN Drift:    0 days
+  Date Match:   ✓ PASS
+  Result:       ✓ 0.00% DRIFT
+
+100 BP (1850 CE)
+  Original:     BP 100-1-1
+  Step 1:       BP → JDN 2396759
+  Step 2:       JDN → Gregorian 1850-1-1 AD
+  Step 3:       Gregorian → JDN 2396759
+  Step 4:       JDN → BP 100-1-1
+  JDN Drift:    0 days
+  Date Match:   ✓ PASS
+  Result:       ✓ 0.00% DRIFT
+
+Test 4 Summary: 4 passed, 0 failed
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TEST 5: Persian (Jalali) ↔ Gregorian (33-Year Cycle Validation)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚠️  KNOWN ISSUE: Persian calendar uses simplified 33-year leap cycle
+Full 2820-year intercalation not implemented
+Expect: Epoch passes, some modern dates may show 1-day drift
+
+
+Persian Epoch (Nowruz 622 CE)
+  Original:     Persian 1-1-1
+  Step 1:       Persian → JDN 1948321
+  Step 2:       JDN → Gregorian 622-3-22 AD
+  Step 3:       Gregorian → JDN 1948321
+  Step 4:       JDN → Persian 1-1-1
+  JDN Drift:    0 days
+  Date Match:   ✓ PASS
+  Result:       ✓ 0.00% DRIFT
+
+Nowruz 1403 (2024 CE)
+  Original:     Persian 1403-1-1
+  Step 1:       Persian → JDN 2460391
+  Step 2:       JDN → Gregorian 2024-3-21 AD
+  Step 3:       Gregorian → JDN 2460391
+  Step 4:       JDN → Persian 1403-1-1
+  JDN Drift:    0 days
+  Date Match:   ✓ PASS
+  Result:       ✓ 0.00% DRIFT
+
+Mid-year 1400
+  Original:     Persian 1400-7-15
+  Step 1:       Persian → JDN 2459496
+  Step 2:       JDN → Gregorian 2021-10-8 AD
+  Step 3:       Gregorian → JDN 2459496
+  Step 4:       JDN → Persian 1400-7-15
+  JDN Drift:    0 days
+  Date Match:   ✓ PASS
+  Result:       ✓ 0.00% DRIFT
+
+Test 5 Summary: 3 perfect, 0 1-day drift (known), 0 failed
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TEST 6: Mayan Long Count (GMT Correlation Constant)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Mayan: Deep-time calendar using GMT correlation (JDN 584,283)
+Note: Only epoch validation (correlation constant)
+      No triangle tests (different structure from other calendars)
+
+Mayan Epoch (13.0.0.0.0 = Long Count zero)
+  Original:     Mayan 0-0-0
+  Step 1:       Mayan → JDN 584283
+  Expected:     JDN 584283 (GMT correlation)
+  Validation:   ✓ PASS
+  Result:       ✓ CORRELATION CONSTANT VERIFIED
+
+Test 6 Summary: Epoch verified (triangle tests N/A)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TEST 7: French Revolutionary ↔ Gregorian (1792-1805 Valid Range)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+French Revolutionary: Decimal calendar (10-day weeks)
+Valid Range: Sept 22, 1792 - Dec 31, 1805 (Year I-XIV)
+Outside this range, calendar was not in use
+
+
+French Epoch (Sept 22, 1792)
+  Original:     French Rev 1-1-1
+  Step 1:       French → JDN 2375840
+  Step 2:       JDN → Gregorian 1792-9-22 AD
+  Step 3:       Gregorian → JDN 2375840
+  Step 4:       JDN → French Rev 1-1-1
+  JDN Drift:    0 days
+  Date Match:   ✓ PASS
+  Result:       ✓ 0.00% DRIFT
+
+Sansculottides (extra days)
+  Original:     French Rev 5-13-5
+  Step 1:       French → JDN 2377665
+  Step 2:       JDN → Gregorian 1797-9-21 AD
+  Step 3:       Gregorian → JDN 2377665
+  Step 4:       JDN → French Rev 5-13-5
+  JDN Drift:    0 days
+  Date Match:   ✓ PASS
+  Result:       ✓ 0.00% DRIFT
+
+Mid-revolution (Year X)
+  Original:     French Rev 10-5-10
+  Step 1:       French → JDN 2379256
+  Step 2:       JDN → Gregorian 1802-1-30 AD
+  Step 3:       Gregorian → JDN 2379256
+  Step 4:       JDN → French Rev 10-5-10
+  JDN Drift:    0 days
+  Date Match:   ✓ PASS
+  Result:       ✓ 0.00% DRIFT
+
+Test 7 Summary: 3 passed, 0 failed (within valid 1792-1805 range)
+
+================================================================================
+FINAL SUMMARY: REMAINING CALENDARS VALIDATION
+================================================================================
+
+📊 VALIDATION RESULTS BY CALENDAR:
+  Test 1 (Ethiopian):           4/4 passed
+  Test 2 (Holocene):            5/5 passed
+  Test 3 (Unix):                3/3 passed
+  Test 4 (Before Present):      4/4 passed
+  Test 5 (Persian):             3 perfect, 0 1-day drift (known)
+  Test 6 (Mayan):               Epoch verified
+  Test 7 (French Rev):          3/3 passed
+
+📈 OVERALL STATISTICS:
+  Total Tests:                  23
+  Passed (0.00% drift):         23
+  Failed:                       0
+  Known Limitations:            0
+  Success Rate:                 100.00%
+
+✅ PROMOTION RECOMMENDATIONS:
+  • Ethiopian: ✅ PROMOTE TO BATTLE-TESTED (0.00% drift)
+  • Holocene: ✅ PROMOTE TO BATTLE-TESTED (0.00% drift)
+  • Unix: ✅ PROMOTE TO BATTLE-TESTED (0.00% drift)
+  • Before Present: ✅ PROMOTE TO BATTLE-TESTED (0.00% drift)
+  • Persian: ✅ PROMOTE TO BATTLE-TESTED (unexpected 0.00% drift!)
+  • Mayan: ℹ️  EPOCH VALIDATED (correlation constant correct, no drift tests)
+  • French Revolutionary: ✅ PROMOTE TO BATTLE-TESTED (0.00% drift within 1792-1805)
+
+================================================================================
+VALIDATION COMPLETE
+================================================================================
+
+✅ ALL TESTS PASSED (excluding known Persian limitation)
+Recommend promoting eligible calendars to Battle-Tested status
+
+Next Steps:
+  1. Review individual test results above
+  2. Update homepage and dashboard with two-tier calendar classification
+  3. Document Persian 33-year cycle limitation in technical specs
+  4. Create verification-remaining-calendars-advanced.test.ts for CI
+================================================================================

@@ -1,0 +1,38 @@
+{
+  "name": "@iterumarchive/neo-calendar-core",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "rm -rf dist *.tsbuildinfo"
+  },
+  "sideEffects": false,
+  "description": "Core calendar engine for NeoCalendar - types, interfaces, and base plugin system",
+  "keywords": [
+    "calendar",
+    "core",
+    "engine",
+    "plugin",
+    "types"
+  ],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iterumarchive/calendar",
+    "directory": "packages/neo-calendar-core"
+  }
+}

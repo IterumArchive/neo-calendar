@@ -1,0 +1,40 @@
+{
+  "name": "@iterumarchive/neo-calendar-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "yarn workspaces foreach -Apt run build",
+    "clean": "yarn workspaces foreach -Ap run clean && rm -rf dist",
+    "rebuild": "yarn clean && yarn build",
+    "build:tests": "tsc",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run",
+    "dev": "tsx watch src/index.ts",
+    "verify:drift": "tsx src/scripts/verify-zero-drift.ts",
+    "verify:drift-advanced": "tsx src/scripts/verify-zero-drift-advanced.ts",
+    "verify:drift-advanced-remaining-calendars": "tsx src/scripts/verify-zero-drift-remaining-calendars",
+    "verify:hebrew": "node src/scripts/find-invalid-years.js",
+    "prepare": "yarn build",
+    "version": "standard-version",
+    "release": "yarn build && yarn publish",
+    "prepublishOnly": "yarn test && yarn build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "standard-version": "^9.5.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.0"
+  },
+  "packageManager": "yarn@4.13.0"
+}

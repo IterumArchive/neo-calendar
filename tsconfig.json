@@ -1,0 +1,73 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // Environment Settings
+    // See also https://aka.ms/tsconfig/module
+    "module": "nodenext",
+    "target": "esnext",
+    "types": ["node"],
+    // For nodejs:
+    // "lib": ["esnext"],
+    // "types": ["node"],
+    // and npm install -D @types/node
+
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Style Options
+    // "noImplicitReturns": true,
+    // "noImplicitOverride": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noFallthroughCasesInSwitch": true,
+    // "noPropertyAccessFromIndexSignature": true,
+
+    // Recommended Options
+    "strict": true,
+    
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleResolution": "nodenext",
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+    
+    // Monorepo Path Mappings
+    "baseUrl": ".",
+    "paths": {
+      "@iterumarchive/neo-calendar-core": ["./packages/neo-calendar-core/src"],
+      "@iterumarchive/neo-calendar-lite": ["./packages/neo-calendar-lite/src"],
+      "@iterumarchive/neo-calendar": ["./packages/neo-calendar/src"],
+      "@iterumarchive/neo-calendar-full": ["./packages/neo-calendar-full/src"],
+      "@iterumarchive/neo-calendar-gregorian": ["./packages/neo-calendar-gregorian/src"],
+      "@iterumarchive/neo-calendar-julian": ["./packages/neo-calendar-julian/src"],
+      "@iterumarchive/neo-calendar-hebrew": ["./packages/neo-calendar-hebrew/src"],
+      "@iterumarchive/neo-calendar-islamic": ["./packages/neo-calendar-islamic/src"],
+      "@iterumarchive/neo-calendar-persian": ["./packages/neo-calendar-persian/src"],
+      "@iterumarchive/neo-calendar-coptic": ["./packages/neo-calendar-coptic/src"],
+      "@iterumarchive/neo-calendar-ethiopian": ["./packages/neo-calendar-ethiopian/src"],
+      "@iterumarchive/neo-calendar-mayan": ["./packages/neo-calendar-mayan/src"],
+      "@iterumarchive/neo-calendar-french-revolutionary": ["./packages/neo-calendar-french-revolutionary/src"],
+      "@iterumarchive/neo-calendar-holocene": ["./packages/neo-calendar-holocene/src"],
+      "@iterumarchive/neo-calendar-unix": ["./packages/neo-calendar-unix/src"],
+      "@iterumarchive/neo-calendar-before-present": ["./packages/neo-calendar-before-present/src"]
+    },
+    // Prevent accidental emission in root
+    "noEmit": true
+  },
+  "include": [
+    "src/tests/**/*.ts",
+    "src/scripts/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ]
+}
