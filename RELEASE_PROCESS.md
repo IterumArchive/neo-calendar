@@ -166,40 +166,58 @@ Edit `.changeset/config.json`:
 
 ---
 
-### Phase 4: NPM Setup
+### Phase 4: NPM Setup & Publishing
 
-#### 4.1 NPM Authentication
+#### 4.1 Enable 2FA on npm Account (REQUIRED)
+
+**npm requires 2FA for publishing scoped packages** like `@iterumarchive/*`. You must enable it:
+
+1. Go to: https://www.npmjs.com/settings/iterumarchive/tfa
+2. Click **"Enable 2FA"**
+3. Choose **"Authorization and Publishing"** (requires 2FA for login and publish)
+4. Scan the QR code with your authenticator app (Google Authenticator, Authy, 1Password, etc.)
+5. Enter the 6-digit code to confirm
+6. **Save your recovery codes** in a safe place!
+
+✅ **COMPLETED** - You have 2FA enabled for publishing.
+
+#### 4.2 NPM Authentication
 
 ```bash
 # Login to npm (interactive)
 npm login
+# Enter username, password, email, and OTP code from authenticator
 
-# Or use auth token (for CI/CD)
-npm config set //registry.npmjs.org/:_authToken YOUR_NPM_TOKEN
+# Verify you're logged in
+npm whoami
+# Should show: iterumarchive
 ```
 
-#### 4.2 Verify Scope Access
+#### 4.3 Verify Scope Access
 
 ```bash
 # Check if you have access to @iterumarchive scope
 npm access ls-packages iterumarchive
 
-# Grant access if needed (if you're the owner)
-npm access grant read-write iterumarchive:developers @iterumarchive
+# Should list your packages or show you have access
 ```
 
-#### 4.3 Create .npmrc (Optional - for CI/CD)
+#### 4.4 Create Automation Token (Optional - for CI/CD)
 
-Create `.npmrc` in project root:
-```ini
-@iterumarchive:registry=https://registry.npmjs.org/
-access=public
-```
+**For GitHub Actions to publish automatically:**
 
-**Add to .gitignore:**
-```
-.npmrc
-```
+1. Go to: https://www.npmjs.com/settings/iterumarchive/tokens
+2. Click "Generate New Token"
+3. Select **"Automation"** type (bypasses 2FA for CI/CD)
+4. Copy the token
+5. Add to GitHub Secrets:
+   - Go to: https://github.com/IterumArchive/neo-calendar/settings/secrets/actions
+   - Click "New repository secret"
+   - Name: `NPM_TOKEN`
+   - Value: paste your token
+   - Click "Add secret"
+
+**Note:** Don't commit tokens to git!
 
 ---
 
@@ -352,17 +370,42 @@ Since packages are already at 0.1.0:
 # 1. Ensure everything is committed
 git add .
 git commit -m "chore: prepare for initial release"
+git push
 
 # 2. Run pre-publish check
 ./scripts/pre-publish-check.sh
 
-# 3. Publish all packages (first time)
-yarn workspaces foreach -Apt --no-private npm publish --access public
+# 3. Login to npm (if not already)
+npm login
+# Enter username, password, email, and OTP from your authenticator app
 
-# 4. Tag the release
+# 4. Publish all packages with 2FA
+./scripts/publish-with-2fa.sh
+# When prompted, press Enter to skip batch OTP
+# For each package, enter your 6-digit OTP code when prompted
+
+# Alternative: Use the simple publish script (requires OTP for each package)
+# ./scripts/publish-all.sh
+
+# 5. Tag the release
 git tag v0.1.0
 git push origin v0.1.0
 ```
+
+**What happens during publishing:**
+- Each package is built and packed into a tarball
+- npm uploads the package to the registry
+- You'll need to enter your 2FA code (from authenticator app) for each package
+- Packages are published in dependency order (core first, then plugins, then main packages)
+
+**If a package fails:**
+- Note which package failed
+- Fix the issue
+- Publish that specific package manually:
+  ```bash
+  cd packages/PACKAGE_NAME
+  npm publish --access public --otp YOUR_OTP_CODE
+  ```
 
 ---
 
@@ -452,10 +495,32 @@ jobs:
 
 ### Publish a Patch Release (0.1.0 → 0.1.1)
 ```bash
-yarn changeset           # Select packages, choose "patch"
-yarn changeset version   # Bump versions
-yarn release             # Publish to npm
-git push --follow-tags   # Push to GitHub
+# 1. Make your code changes
+# 2. Create a changeset
+yarn changeset           # Select packages, choose "patch", write summary
+
+# 3. Commit the changeset
+git add .
+git commit -m "feat: description of your changes"
+git push
+
+# 4. Version packages (updates package.json and creates CHANGELOG.md)
+yarn changeset version
+
+# 5. Commit version changes
+git add .
+git commit -m "chore: version packages"
+git push
+
+# 6. Build packages
+yarn build
+
+# 7. Publish to npm (requires 2FA OTP codes)
+./scripts/publish-with-2fa.sh
+# Enter your 6-digit OTP code when prompted for each package
+
+# 8. Push tags
+git push --follow-tags
 ```
 
 ### Publish a Minor Release (0.1.0 → 0.2.0)
@@ -476,9 +541,10 @@ git push --follow-tags
 
 ### Publish Only Specific Packages
 ```bash
-# In the package directory
+# Get your 2FA OTP code from authenticator app
+# Then publish the specific package
 cd packages/neo-calendar-core
-npm publish --access public
+npm publish --access public --otp YOUR_6_DIGIT_CODE
 ```
 
 ### Unpublish a Package (Within 72 hours)
@@ -489,6 +555,23 @@ npm unpublish @iterumarchive/neo-calendar@0.1.0
 ### Check Published Versions
 ```bash
 npm view @iterumarchive/neo-calendar versions
+npm view @iterumarchive/neo-calendar-core versions
+
+# Check all your published packages
+npm access ls-packages iterumarchive
+```
+
+### Verify Packages Were Published Successfully
+```bash
+# Check that a package is available
+npm info @iterumarchive/neo-calendar
+
+# Try installing in a test project
+mkdir /tmp/test-neocalendar
+cd /tmp/test-neocalendar
+npm init -y
+npm install @iterumarchive/neo-calendar
+node -e "console.log(require('@iterumarchive/neo-calendar'))"
 ```
 
 ---
