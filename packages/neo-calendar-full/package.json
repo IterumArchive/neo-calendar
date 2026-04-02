@@ -40,27 +40,31 @@
     "date",
     "conversion"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "IterumArchive",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/iterumarchive/calendar",
+    "url": "https://github.com/IterumArchive/neo-calendar",
     "directory": "packages/neo-calendar-full"
   },
   "dependencies": {
-    "@iterumarchive/neo-calendar": "*",
-    "@iterumarchive/neo-calendar-before-present": "*",
-    "@iterumarchive/neo-calendar-coptic": "*",
-    "@iterumarchive/neo-calendar-core": "*",
-    "@iterumarchive/neo-calendar-ethiopian": "*",
-    "@iterumarchive/neo-calendar-french-revolutionary": "*",
-    "@iterumarchive/neo-calendar-gregorian": "*",
-    "@iterumarchive/neo-calendar-hebrew": "*",
-    "@iterumarchive/neo-calendar-holocene": "*",
-    "@iterumarchive/neo-calendar-islamic": "*",
-    "@iterumarchive/neo-calendar-julian": "*",
-    "@iterumarchive/neo-calendar-mayan": "*",
-    "@iterumarchive/neo-calendar-persian": "*",
-    "@iterumarchive/neo-calendar-unix": "*"
+    "@iterumarchive/neo-calendar": "workspace:*",
+    "@iterumarchive/neo-calendar-before-present": "workspace:*",
+    "@iterumarchive/neo-calendar-coptic": "workspace:*",
+    "@iterumarchive/neo-calendar-core": "workspace:*",
+    "@iterumarchive/neo-calendar-ethiopian": "workspace:*",
+    "@iterumarchive/neo-calendar-french-revolutionary": "workspace:*",
+    "@iterumarchive/neo-calendar-gregorian": "workspace:*",
+    "@iterumarchive/neo-calendar-hebrew": "workspace:*",
+    "@iterumarchive/neo-calendar-holocene": "workspace:*",
+    "@iterumarchive/neo-calendar-islamic": "workspace:*",
+    "@iterumarchive/neo-calendar-julian": "workspace:*",
+    "@iterumarchive/neo-calendar-mayan": "workspace:*",
+    "@iterumarchive/neo-calendar-persian": "workspace:*",
+    "@iterumarchive/neo-calendar-unix": "workspace:*"
+  },
+  "homepage": "https://github.com/IterumArchive/neo-calendar#readme",
+  "bugs": {
+    "url": "https://github.com/IterumArchive/neo-calendar/issues"
   }
 }

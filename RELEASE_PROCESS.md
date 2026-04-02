@@ -45,17 +45,19 @@ cd /Users/avpuser/Projects/neo-calendar
 # Initialize git
 git init
 
-# Add GitHub remote (update with your actual repo URL)
-git remote add origin https://github.com/IterumArchive/chronos-core.git
+# Add GitHub remote
+git remote add origin https://github.com/IterumArchive/neo-calendar.git
 
 # Create initial commit
 git add .
-git commit -m "chore: initial commit - monorepo setup"
+git commit -m "chore: initial commit"
 ```
+
+✅ **COMPLETED** - Git repository is initialized and connected to GitHub.
 
 #### 1.2 Update Repository URLs in package.json
 All packages currently reference `https://github.com/iterumarchive/calendar`.  
-This needs to be updated to: `https://github.com/IterumArchive/chronos-core`
+This needs to be updated to: `https://github.com/IterumArchive/neo-calendar`
 
 **Files to update:** Every `packages/*/package.json`
 
@@ -77,24 +79,24 @@ This needs to be updated to: `https://github.com/IterumArchive/chronos-core`
    "license": "MIT",
    ```
 
-3. **Repository URLs** - Update to chronos-core:
+3. **Repository URLs** - Update to neo-calendar:
    ```json
    "repository": {
      "type": "git",
-     "url": "https://github.com/IterumArchive/chronos-core",
+     "url": "https://github.com/IterumArchive/neo-calendar",
      "directory": "packages/neo-calendar-core"
    },
    ```
 
 4. **Homepage** (optional but professional):
    ```json
-   "homepage": "https://github.com/IterumArchive/chronos-core#readme",
+   "homepage": "https://github.com/IterumArchive/neo-calendar#readme",
    ```
 
 5. **Bugs** (optional but professional):
    ```json
    "bugs": {
-     "url": "https://github.com/IterumArchive/chronos-core/issues"
+     "url": "https://github.com/IterumArchive/neo-calendar/issues"
    },
    ```
 

@@ -27,14 +27,18 @@
     "human-era",
     "plugin"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "IterumArchive",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/iterumarchive/calendar",
+    "url": "https://github.com/IterumArchive/neo-calendar",
     "directory": "packages/neo-calendar-holocene"
   },
   "dependencies": {
-    "@iterumarchive/neo-calendar-core": "*"
+    "@iterumarchive/neo-calendar-core": "workspace:*"
+  },
+  "homepage": "https://github.com/IterumArchive/neo-calendar#readme",
+  "bugs": {
+    "url": "https://github.com/IterumArchive/neo-calendar/issues"
   }
 }

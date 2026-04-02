@@ -32,18 +32,22 @@
     "date",
     "conversion"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "IterumArchive",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/iterumarchive/calendar",
+    "url": "https://github.com/IterumArchive/neo-calendar",
     "directory": "packages/neo-calendar"
   },
   "dependencies": {
-    "@iterumarchive/neo-calendar-core": "*",
-    "@iterumarchive/neo-calendar-gregorian": "*",
-    "@iterumarchive/neo-calendar-holocene": "*",
-    "@iterumarchive/neo-calendar-julian": "*",
-    "@iterumarchive/neo-calendar-unix": "*"
+    "@iterumarchive/neo-calendar-core": "workspace:*",
+    "@iterumarchive/neo-calendar-gregorian": "workspace:*",
+    "@iterumarchive/neo-calendar-holocene": "workspace:*",
+    "@iterumarchive/neo-calendar-julian": "workspace:*",
+    "@iterumarchive/neo-calendar-unix": "workspace:*"
+  },
+  "homepage": "https://github.com/IterumArchive/neo-calendar#readme",
+  "bugs": {
+    "url": "https://github.com/IterumArchive/neo-calendar/issues"
   }
 }
