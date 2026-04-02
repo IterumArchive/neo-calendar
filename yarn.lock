@@ -513,41 +513,41 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@iterumarchive/neo-calendar-before-present@workspace:*, @iterumarchive/neo-calendar-before-present@workspace:packages/neo-calendar-before-present":
+"@iterumarchive/neo-calendar-before-present@npm:^0.1.0, @iterumarchive/neo-calendar-before-present@workspace:packages/neo-calendar-before-present":
   version: 0.0.0-use.local
   resolution: "@iterumarchive/neo-calendar-before-present@workspace:packages/neo-calendar-before-present"
   dependencies:
-    "@iterumarchive/neo-calendar-core": "workspace:*"
+    "@iterumarchive/neo-calendar-core": "npm:^0.1.0"
   languageName: unknown
   linkType: soft
 
-"@iterumarchive/neo-calendar-coptic@workspace:*, @iterumarchive/neo-calendar-coptic@workspace:packages/neo-calendar-coptic":
+"@iterumarchive/neo-calendar-coptic@npm:^0.1.0, @iterumarchive/neo-calendar-coptic@workspace:packages/neo-calendar-coptic":
   version: 0.0.0-use.local
   resolution: "@iterumarchive/neo-calendar-coptic@workspace:packages/neo-calendar-coptic"
   dependencies:
-    "@iterumarchive/neo-calendar-core": "workspace:*"
+    "@iterumarchive/neo-calendar-core": "npm:^0.1.0"
   languageName: unknown
   linkType: soft
 
-"@iterumarchive/neo-calendar-core@workspace:*, @iterumarchive/neo-calendar-core@workspace:packages/neo-calendar-core":
+"@iterumarchive/neo-calendar-core@npm:^0.1.0, @iterumarchive/neo-calendar-core@workspace:packages/neo-calendar-core":
   version: 0.0.0-use.local
   resolution: "@iterumarchive/neo-calendar-core@workspace:packages/neo-calendar-core"
   languageName: unknown
   linkType: soft
 
-"@iterumarchive/neo-calendar-ethiopian@workspace:*, @iterumarchive/neo-calendar-ethiopian@workspace:packages/neo-calendar-ethiopian":
+"@iterumarchive/neo-calendar-ethiopian@npm:^0.1.0, @iterumarchive/neo-calendar-ethiopian@workspace:packages/neo-calendar-ethiopian":
   version: 0.0.0-use.local
   resolution: "@iterumarchive/neo-calendar-ethiopian@workspace:packages/neo-calendar-ethiopian"
   dependencies:
-    "@iterumarchive/neo-calendar-core": "workspace:*"
+    "@iterumarchive/neo-calendar-core": "npm:^0.1.0"
   languageName: unknown
   linkType: soft
 
-"@iterumarchive/neo-calendar-french-revolutionary@workspace:*, @iterumarchive/neo-calendar-french-revolutionary@workspace:packages/neo-calendar-french-revolutionary":
+"@iterumarchive/neo-calendar-french-revolutionary@npm:^0.1.0, @iterumarchive/neo-calendar-french-revolutionary@workspace:packages/neo-calendar-french-revolutionary":
   version: 0.0.0-use.local
   resolution: "@iterumarchive/neo-calendar-french-revolutionary@workspace:packages/neo-calendar-french-revolutionary"
   dependencies:
-    "@iterumarchive/neo-calendar-core": "workspace:*"
+    "@iterumarchive/neo-calendar-core": "npm:^0.1.0"
   languageName: unknown
   linkType: soft
 
@@ -555,60 +555,60 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@iterumarchive/neo-calendar-full@workspace:packages/neo-calendar-full"
   dependencies:
-    "@iterumarchive/neo-calendar": "workspace:*"
-    "@iterumarchive/neo-calendar-before-present": "workspace:*"
-    "@iterumarchive/neo-calendar-coptic": "workspace:*"
-    "@iterumarchive/neo-calendar-core": "workspace:*"
-    "@iterumarchive/neo-calendar-ethiopian": "workspace:*"
-    "@iterumarchive/neo-calendar-french-revolutionary": "workspace:*"
-    "@iterumarchive/neo-calendar-gregorian": "workspace:*"
-    "@iterumarchive/neo-calendar-hebrew": "workspace:*"
-    "@iterumarchive/neo-calendar-holocene": "workspace:*"
-    "@iterumarchive/neo-calendar-islamic": "workspace:*"
-    "@iterumarchive/neo-calendar-julian": "workspace:*"
-    "@iterumarchive/neo-calendar-mayan": "workspace:*"
-    "@iterumarchive/neo-calendar-persian": "workspace:*"
-    "@iterumarchive/neo-calendar-unix": "workspace:*"
+    "@iterumarchive/neo-calendar": "npm:^0.1.0"
+    "@iterumarchive/neo-calendar-before-present": "npm:^0.1.0"
+    "@iterumarchive/neo-calendar-coptic": "npm:^0.1.0"
+    "@iterumarchive/neo-calendar-core": "npm:^0.1.0"
+    "@iterumarchive/neo-calendar-ethiopian": "npm:^0.1.0"
+    "@iterumarchive/neo-calendar-french-revolutionary": "npm:^0.1.0"
+    "@iterumarchive/neo-calendar-gregorian": "npm:^0.1.0"
+    "@iterumarchive/neo-calendar-hebrew": "npm:^0.1.0"
+    "@iterumarchive/neo-calendar-holocene": "npm:^0.1.0"
+    "@iterumarchive/neo-calendar-islamic": "npm:^0.1.0"
+    "@iterumarchive/neo-calendar-julian": "npm:^0.1.0"
+    "@iterumarchive/neo-calendar-mayan": "npm:^0.1.0"
+    "@iterumarchive/neo-calendar-persian": "npm:^0.1.0"
+    "@iterumarchive/neo-calendar-unix": "npm:^0.1.0"
   languageName: unknown
   linkType: soft
 
-"@iterumarchive/neo-calendar-gregorian@workspace:*, @iterumarchive/neo-calendar-gregorian@workspace:packages/neo-calendar-gregorian":
+"@iterumarchive/neo-calendar-gregorian@npm:^0.1.0, @iterumarchive/neo-calendar-gregorian@workspace:packages/neo-calendar-gregorian":
   version: 0.0.0-use.local
   resolution: "@iterumarchive/neo-calendar-gregorian@workspace:packages/neo-calendar-gregorian"
   dependencies:
-    "@iterumarchive/neo-calendar-core": "workspace:*"
+    "@iterumarchive/neo-calendar-core": "npm:^0.1.0"
   languageName: unknown
   linkType: soft
 
-"@iterumarchive/neo-calendar-hebrew@workspace:*, @iterumarchive/neo-calendar-hebrew@workspace:packages/neo-calendar-hebrew":
+"@iterumarchive/neo-calendar-hebrew@npm:^0.1.0, @iterumarchive/neo-calendar-hebrew@workspace:packages/neo-calendar-hebrew":
   version: 0.0.0-use.local
   resolution: "@iterumarchive/neo-calendar-hebrew@workspace:packages/neo-calendar-hebrew"
   dependencies:
-    "@iterumarchive/neo-calendar-core": "workspace:*"
+    "@iterumarchive/neo-calendar-core": "npm:^0.1.0"
   languageName: unknown
   linkType: soft
 
-"@iterumarchive/neo-calendar-holocene@workspace:*, @iterumarchive/neo-calendar-holocene@workspace:packages/neo-calendar-holocene":
+"@iterumarchive/neo-calendar-holocene@npm:^0.1.0, @iterumarchive/neo-calendar-holocene@workspace:packages/neo-calendar-holocene":
   version: 0.0.0-use.local
   resolution: "@iterumarchive/neo-calendar-holocene@workspace:packages/neo-calendar-holocene"
   dependencies:
-    "@iterumarchive/neo-calendar-core": "workspace:*"
+    "@iterumarchive/neo-calendar-core": "npm:^0.1.0"
   languageName: unknown
   linkType: soft
 
-"@iterumarchive/neo-calendar-islamic@workspace:*, @iterumarchive/neo-calendar-islamic@workspace:packages/neo-calendar-islamic":
+"@iterumarchive/neo-calendar-islamic@npm:^0.1.0, @iterumarchive/neo-calendar-islamic@workspace:packages/neo-calendar-islamic":
   version: 0.0.0-use.local
   resolution: "@iterumarchive/neo-calendar-islamic@workspace:packages/neo-calendar-islamic"
   dependencies:
-    "@iterumarchive/neo-calendar-core": "workspace:*"
+    "@iterumarchive/neo-calendar-core": "npm:^0.1.0"
   languageName: unknown
   linkType: soft
 
-"@iterumarchive/neo-calendar-julian@workspace:*, @iterumarchive/neo-calendar-julian@workspace:packages/neo-calendar-julian":
+"@iterumarchive/neo-calendar-julian@npm:^0.1.0, @iterumarchive/neo-calendar-julian@workspace:packages/neo-calendar-julian":
   version: 0.0.0-use.local
   resolution: "@iterumarchive/neo-calendar-julian@workspace:packages/neo-calendar-julian"
   dependencies:
-    "@iterumarchive/neo-calendar-core": "workspace:*"
+    "@iterumarchive/neo-calendar-core": "npm:^0.1.0"
   languageName: unknown
   linkType: soft
 
@@ -616,19 +616,19 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@iterumarchive/neo-calendar-lite@workspace:packages/neo-calendar-lite"
   dependencies:
-    "@iterumarchive/neo-calendar-core": "workspace:*"
-    "@iterumarchive/neo-calendar-gregorian": "workspace:*"
-    "@iterumarchive/neo-calendar-holocene": "workspace:*"
-    "@iterumarchive/neo-calendar-julian": "workspace:*"
-    "@iterumarchive/neo-calendar-unix": "workspace:*"
+    "@iterumarchive/neo-calendar-core": "npm:^0.1.0"
+    "@iterumarchive/neo-calendar-gregorian": "npm:^0.1.0"
+    "@iterumarchive/neo-calendar-holocene": "npm:^0.1.0"
+    "@iterumarchive/neo-calendar-julian": "npm:^0.1.0"
+    "@iterumarchive/neo-calendar-unix": "npm:^0.1.0"
   languageName: unknown
   linkType: soft
 
-"@iterumarchive/neo-calendar-mayan@workspace:*, @iterumarchive/neo-calendar-mayan@workspace:packages/neo-calendar-mayan":
+"@iterumarchive/neo-calendar-mayan@npm:^0.1.0, @iterumarchive/neo-calendar-mayan@workspace:packages/neo-calendar-mayan":
   version: 0.0.0-use.local
   resolution: "@iterumarchive/neo-calendar-mayan@workspace:packages/neo-calendar-mayan"
   dependencies:
-    "@iterumarchive/neo-calendar-core": "workspace:*"
+    "@iterumarchive/neo-calendar-core": "npm:^0.1.0"
   languageName: unknown
   linkType: soft
 
@@ -647,31 +647,31 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@iterumarchive/neo-calendar-persian@workspace:*, @iterumarchive/neo-calendar-persian@workspace:packages/neo-calendar-persian":
+"@iterumarchive/neo-calendar-persian@npm:^0.1.0, @iterumarchive/neo-calendar-persian@workspace:packages/neo-calendar-persian":
   version: 0.0.0-use.local
   resolution: "@iterumarchive/neo-calendar-persian@workspace:packages/neo-calendar-persian"
   dependencies:
-    "@iterumarchive/neo-calendar-core": "workspace:*"
+    "@iterumarchive/neo-calendar-core": "npm:^0.1.0"
   languageName: unknown
   linkType: soft
 
-"@iterumarchive/neo-calendar-unix@workspace:*, @iterumarchive/neo-calendar-unix@workspace:packages/neo-calendar-unix":
+"@iterumarchive/neo-calendar-unix@npm:^0.1.0, @iterumarchive/neo-calendar-unix@workspace:packages/neo-calendar-unix":
   version: 0.0.0-use.local
   resolution: "@iterumarchive/neo-calendar-unix@workspace:packages/neo-calendar-unix"
   dependencies:
-    "@iterumarchive/neo-calendar-core": "workspace:*"
+    "@iterumarchive/neo-calendar-core": "npm:^0.1.0"
   languageName: unknown
   linkType: soft
 
-"@iterumarchive/neo-calendar@workspace:*, @iterumarchive/neo-calendar@workspace:packages/neo-calendar":
+"@iterumarchive/neo-calendar@npm:^0.1.0, @iterumarchive/neo-calendar@workspace:packages/neo-calendar":
   version: 0.0.0-use.local
   resolution: "@iterumarchive/neo-calendar@workspace:packages/neo-calendar"
   dependencies:
-    "@iterumarchive/neo-calendar-core": "workspace:*"
-    "@iterumarchive/neo-calendar-gregorian": "workspace:*"
-    "@iterumarchive/neo-calendar-holocene": "workspace:*"
-    "@iterumarchive/neo-calendar-julian": "workspace:*"
-    "@iterumarchive/neo-calendar-unix": "workspace:*"
+    "@iterumarchive/neo-calendar-core": "npm:^0.1.0"
+    "@iterumarchive/neo-calendar-gregorian": "npm:^0.1.0"
+    "@iterumarchive/neo-calendar-holocene": "npm:^0.1.0"
+    "@iterumarchive/neo-calendar-julian": "npm:^0.1.0"
+    "@iterumarchive/neo-calendar-unix": "npm:^0.1.0"
   languageName: unknown
   linkType: soft
 

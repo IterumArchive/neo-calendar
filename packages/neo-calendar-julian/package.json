@@ -34,7 +34,7 @@
     "directory": "packages/neo-calendar-julian"
   },
   "dependencies": {
-    "@iterumarchive/neo-calendar-core": "workspace:*"
+    "@iterumarchive/neo-calendar-core": "^0.1.0"
   },
   "homepage": "https://github.com/IterumArchive/neo-calendar#readme",
   "bugs": {

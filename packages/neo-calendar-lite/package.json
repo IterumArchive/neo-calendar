@@ -41,11 +41,11 @@
     "directory": "packages/neo-calendar-lite"
   },
   "dependencies": {
-    "@iterumarchive/neo-calendar-core": "workspace:*",
-    "@iterumarchive/neo-calendar-gregorian": "workspace:*",
-    "@iterumarchive/neo-calendar-holocene": "workspace:*",
-    "@iterumarchive/neo-calendar-julian": "workspace:*",
-    "@iterumarchive/neo-calendar-unix": "workspace:*"
+    "@iterumarchive/neo-calendar-core": "^0.1.0",
+    "@iterumarchive/neo-calendar-gregorian": "^0.1.0",
+    "@iterumarchive/neo-calendar-holocene": "^0.1.0",
+    "@iterumarchive/neo-calendar-julian": "^0.1.0",
+    "@iterumarchive/neo-calendar-unix": "^0.1.0"
   },
   "homepage": "https://github.com/IterumArchive/neo-calendar#readme",
   "bugs": {
