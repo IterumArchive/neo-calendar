@@ -466,45 +466,6 @@ Before publishing, verify:
 - [ ] No peer dependency warnings
 - [ ] Tree-shaking works (check bundle analyzer)
 
-## Migration Guide
-
-### Migrating from v0.1.0 (Single Package)
-
-**Before (v0.1.0):**
-```typescript
-import { NeoCalendar } from '@iterumarchive/calendar';
-```
-
-**After (v0.2.0 Monorepo):**
-```typescript
-// Standard package (same API, 4 auto-registered calendars)
-import { NeoCalendar } from '@iterumarchive/neo-calendar';
-
-// Full package (all 12 calendars)
-import { NeoCalendar } from '@iterumarchive/neo-calendar-full';
-```
-
-**Breaking Changes:**
-- Package name changed from `@iterumarchive/calendar` to `@iterumarchive/neo-calendar`
-- Standard package only includes 4 calendars by default (was 12)
-- Manual plugin registration required for Hebrew, Islamic, Persian, Coptic, Ethiopian, Mayan, French Revolutionary, Before Present
-- Use Full package for zero-config experience with all calendars
-
-**API Compatibility:**
-- ✅ All API methods remain the same
-- ✅ `NeoCalendar.calendar()` works identically
-- ✅ `NeoDate`, `NeoDuration`, `NeoSpan`, `NeoSeries` unchanged
-- ✅ Era-driven calendar selection unchanged
-- ✅ Method chaining works the same
-
-**Migration Steps:**
-1. Uninstall old package: `npm uninstall @iterumarchive/calendar`
-2. Install new package: `npm install @iterumarchive/neo-calendar` (or `-full`)
-3. Update imports: `@iterumarchive/calendar` → `@iterumarchive/neo-calendar`
-4. If using Hebrew, Islamic, etc., either:
-   - Switch to Full package, OR
-   - Import and register plugins manually (see [Adding More Calendars](#adding-more-calendars))
-
 ## Documentation
 
 ### Package Documentation
