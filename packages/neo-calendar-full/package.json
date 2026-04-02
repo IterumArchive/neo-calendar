@@ -1,6 +1,6 @@
 {
   "name": "@iterumarchive/neo-calendar-full",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -48,20 +48,20 @@
     "directory": "packages/neo-calendar-full"
   },
   "dependencies": {
-    "@iterumarchive/neo-calendar": "^0.1.0",
-    "@iterumarchive/neo-calendar-before-present": "^0.1.0",
-    "@iterumarchive/neo-calendar-coptic": "^0.1.0",
-    "@iterumarchive/neo-calendar-core": "^0.1.0",
-    "@iterumarchive/neo-calendar-ethiopian": "^0.1.0",
-    "@iterumarchive/neo-calendar-french-revolutionary": "^0.1.0",
-    "@iterumarchive/neo-calendar-gregorian": "^0.1.0",
-    "@iterumarchive/neo-calendar-hebrew": "^0.1.0",
-    "@iterumarchive/neo-calendar-holocene": "^0.1.0",
-    "@iterumarchive/neo-calendar-islamic": "^0.1.0",
-    "@iterumarchive/neo-calendar-julian": "^0.1.0",
-    "@iterumarchive/neo-calendar-mayan": "^0.1.0",
-    "@iterumarchive/neo-calendar-persian": "^0.1.0",
-    "@iterumarchive/neo-calendar-unix": "^0.1.0"
+    "@iterumarchive/neo-calendar": "^0.1.1",
+    "@iterumarchive/neo-calendar-before-present": "^0.1.1",
+    "@iterumarchive/neo-calendar-coptic": "^0.1.1",
+    "@iterumarchive/neo-calendar-core": "^0.1.1",
+    "@iterumarchive/neo-calendar-ethiopian": "^0.1.1",
+    "@iterumarchive/neo-calendar-french-revolutionary": "^0.1.1",
+    "@iterumarchive/neo-calendar-gregorian": "^0.1.1",
+    "@iterumarchive/neo-calendar-hebrew": "^0.1.1",
+    "@iterumarchive/neo-calendar-holocene": "^0.1.1",
+    "@iterumarchive/neo-calendar-islamic": "^0.1.1",
+    "@iterumarchive/neo-calendar-julian": "^0.1.1",
+    "@iterumarchive/neo-calendar-mayan": "^0.1.1",
+    "@iterumarchive/neo-calendar-persian": "^0.1.1",
+    "@iterumarchive/neo-calendar-unix": "^0.1.1"
   },
   "homepage": "https://github.com/IterumArchive/neo-calendar#readme",
   "bugs": {
