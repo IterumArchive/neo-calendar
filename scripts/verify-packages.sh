@@ -73,8 +73,27 @@ EOF
 
 # Install from local tarballs
 echo ""
-echo "📥 Installing neo-calendar-full from local tarball..."
-npm install ../tarballs/iterumarchive-neo-calendar-full-0.1.0.tgz
+echo "📥 Installing all packages from local tarballs..."
+echo "(This simulates what users will get when 0.1.1 is published)"
+echo ""
+
+# Install all dependencies first
+npm install \
+  ../tarballs/iterumarchive-neo-calendar-core-0.1.0.tgz \
+  ../tarballs/iterumarchive-neo-calendar-before-present-0.1.0.tgz \
+  ../tarballs/iterumarchive-neo-calendar-coptic-0.1.0.tgz \
+  ../tarballs/iterumarchive-neo-calendar-ethiopian-0.1.0.tgz \
+  ../tarballs/iterumarchive-neo-calendar-french-revolutionary-0.1.0.tgz \
+  ../tarballs/iterumarchive-neo-calendar-gregorian-0.1.0.tgz \
+  ../tarballs/iterumarchive-neo-calendar-hebrew-0.1.0.tgz \
+  ../tarballs/iterumarchive-neo-calendar-holocene-0.1.0.tgz \
+  ../tarballs/iterumarchive-neo-calendar-islamic-0.1.0.tgz \
+  ../tarballs/iterumarchive-neo-calendar-julian-0.1.0.tgz \
+  ../tarballs/iterumarchive-neo-calendar-mayan-0.1.0.tgz \
+  ../tarballs/iterumarchive-neo-calendar-persian-0.1.0.tgz \
+  ../tarballs/iterumarchive-neo-calendar-unix-0.1.0.tgz \
+  ../tarballs/iterumarchive-neo-calendar-0.1.0.tgz \
+  ../tarballs/iterumarchive-neo-calendar-full-0.1.0.tgz
 
 echo ""
 echo "✅ Installation successful!"
@@ -88,24 +107,28 @@ echo ""
 # Test imports
 echo "🧪 Testing imports..."
 cat > test.mjs << 'EOF'
-import { NeoCalendar } from '@iterumarchive/neo-calendar-full';
+import { NeoCalendar, Registry } from '@iterumarchive/neo-calendar-full';
 
 console.log('✅ Import successful!');
 console.log('NeoCalendar:', typeof NeoCalendar);
 
-// Try creating an instance
-const cal = new NeoCalendar();
-console.log('✅ NeoCalendar instantiated!');
-
 // Check plugins are registered
-const plugins = cal.getRegisteredPlugins();
-console.log('✅ Registered plugins:', plugins.length);
-console.log('   Plugins:', plugins.join(', '));
+const plugins = Registry.list();
+console.log('✅ Registered calendar systems:', plugins.length);
+console.log('   Systems:', plugins.join(', '));
 
 if (plugins.length < 12) {
   console.error('❌ ERROR: Expected 12+ plugins but got', plugins.length);
   process.exit(1);
 }
+
+// Test creating a date
+const date = NeoCalendar.at(2024, 3, 15, 'GREGORIAN');
+console.log('✅ Created date:', date.toString());
+
+// Test conversion
+const julianDate = date.as('JULIAN');
+console.log('✅ Converted to Julian:', julianDate);
 
 console.log('\n🎉 All tests passed!');
 EOF
